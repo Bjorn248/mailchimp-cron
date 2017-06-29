@@ -1,0 +1,8 @@
+{
+  "name": "mailchimp-cron",
+  "description": "Uses the MailChimp API to send an email on a weekly basis. Uses cloudwatch event triggered lambda functions to run on a weekly basis.",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::532730157799:role/mailchimp-cron_lambda_function",
+  "environment": {}
+}
