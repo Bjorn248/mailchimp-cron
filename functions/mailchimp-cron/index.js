@@ -19,6 +19,7 @@ exports.handle = function(e, ctx, cb) {
 	};
 
 	var req = https.request(post_options, function(res) {
+		console.log("Replicate Status: " + res.statusCode);
 		var data = [];
 		res.on('data', function(chunk) {
 			data.push(chunk);
@@ -44,7 +45,7 @@ exports.handle = function(e, ctx, cb) {
 			};
 
 			var sendActionRequest = https.request(post_options, function(sendActionResponse) {
-				console.log(sendActionResponse.statusCode);
+				console.log("Send Status: " + sendActionResponse.statusCode);
 
 				var data = [];
 				sendActionResponse.on('data', function(chunk) {
