@@ -1,6 +1,6 @@
 var https = require('https');
 // This is the campaign that will be replicated and sent again
-var originalCampaignId = 'bcb874b410';
+var originalCampaignId = process.env.CAMPAIGN_ID || 'bcb874b410';
 console.log('starting function')
 exports.handle = function(e, ctx, cb) {
 	console.log('processing event: %j', e)
