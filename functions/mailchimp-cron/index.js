@@ -69,7 +69,3 @@ exports.handle = function(e, ctx, cb) {
 
 	cb(null, { campaign_status: 'sent' });
 }
-
-exports.handle(null, null, function() {
-	console.log('finished');
-});
